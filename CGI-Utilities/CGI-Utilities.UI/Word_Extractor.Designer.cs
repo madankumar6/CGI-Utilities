@@ -30,18 +30,19 @@
         {
             this.wordExtarctorTitle = new System.Windows.Forms.Label();
             this.lblStartingPosition = new System.Windows.Forms.Label();
-            this.lblEndingPosition = new System.Windows.Forms.Label();
+            this.lblNoOfCharacters = new System.Windows.Forms.Label();
             this.lblFileInput = new System.Windows.Forms.Label();
             this.nudStartingPosition = new System.Windows.Forms.NumericUpDown();
-            this.nudEndingPosition = new System.Windows.Forms.NumericUpDown();
+            this.nudNoOfCharacters = new System.Windows.Forms.NumericUpDown();
             this.btnInputFileBrowse = new System.Windows.Forms.Button();
             this.lblInputFileName = new System.Windows.Forms.Label();
             this.lblExportDocumentType = new System.Windows.Forms.Label();
             this.cbxExportDocumentType = new System.Windows.Forms.ComboBox();
             this.btnProcess = new System.Windows.Forms.Button();
             this.ofdInputFile = new System.Windows.Forms.OpenFileDialog();
+            this.btnExportWords = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudStartingPosition)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudEndingPosition)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNoOfCharacters)).BeginInit();
             this.SuspendLayout();
             // 
             // wordExtarctorTitle
@@ -63,14 +64,14 @@
             this.lblStartingPosition.TabIndex = 1;
             this.lblStartingPosition.Text = "Starting Position";
             // 
-            // lblEndingPosition
+            // lblNoOfCharacters
             // 
-            this.lblEndingPosition.AutoSize = true;
-            this.lblEndingPosition.Location = new System.Drawing.Point(52, 143);
-            this.lblEndingPosition.Name = "lblEndingPosition";
-            this.lblEndingPosition.Size = new System.Drawing.Size(80, 13);
-            this.lblEndingPosition.TabIndex = 1;
-            this.lblEndingPosition.Text = "Ending Position";
+            this.lblNoOfCharacters.AutoSize = true;
+            this.lblNoOfCharacters.Location = new System.Drawing.Point(52, 143);
+            this.lblNoOfCharacters.Name = "lblNoOfCharacters";
+            this.lblNoOfCharacters.Size = new System.Drawing.Size(90, 13);
+            this.lblNoOfCharacters.TabIndex = 1;
+            this.lblNoOfCharacters.Text = "No. of Characters";
             // 
             // lblFileInput
             // 
@@ -88,12 +89,12 @@
             this.nudStartingPosition.Size = new System.Drawing.Size(120, 20);
             this.nudStartingPosition.TabIndex = 2;
             // 
-            // nudEndingPosition
+            // nudNoOfCharacters
             // 
-            this.nudEndingPosition.Location = new System.Drawing.Point(173, 143);
-            this.nudEndingPosition.Name = "nudEndingPosition";
-            this.nudEndingPosition.Size = new System.Drawing.Size(120, 20);
-            this.nudEndingPosition.TabIndex = 3;
+            this.nudNoOfCharacters.Location = new System.Drawing.Point(173, 143);
+            this.nudNoOfCharacters.Name = "nudNoOfCharacters";
+            this.nudNoOfCharacters.Size = new System.Drawing.Size(120, 20);
+            this.nudNoOfCharacters.TabIndex = 3;
             // 
             // btnInputFileBrowse
             // 
@@ -145,18 +146,29 @@
             // 
             this.ofdInputFile.FileName = "openFileDialog1";
             // 
+            // btnExportWords
+            // 
+            this.btnExportWords.Location = new System.Drawing.Point(231, 234);
+            this.btnExportWords.Name = "btnExportWords";
+            this.btnExportWords.Size = new System.Drawing.Size(75, 23);
+            this.btnExportWords.TabIndex = 7;
+            this.btnExportWords.Text = "Export";
+            this.btnExportWords.UseVisualStyleBackColor = true;
+            this.btnExportWords.Click += new System.EventHandler(this.btnExportWords_Click);
+            // 
             // Word_Extractor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 323);
+            this.Controls.Add(this.btnExportWords);
             this.Controls.Add(this.cbxExportDocumentType);
             this.Controls.Add(this.lblExportDocumentType);
             this.Controls.Add(this.btnProcess);
             this.Controls.Add(this.btnInputFileBrowse);
-            this.Controls.Add(this.nudEndingPosition);
+            this.Controls.Add(this.nudNoOfCharacters);
             this.Controls.Add(this.nudStartingPosition);
-            this.Controls.Add(this.lblEndingPosition);
+            this.Controls.Add(this.lblNoOfCharacters);
             this.Controls.Add(this.lblInputFileName);
             this.Controls.Add(this.lblFileInput);
             this.Controls.Add(this.lblStartingPosition);
@@ -165,7 +177,7 @@
             this.Text = "Word_Extractor";
             this.Load += new System.EventHandler(this.Word_Extractor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudStartingPosition)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudEndingPosition)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNoOfCharacters)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,16 +187,17 @@
 
         private System.Windows.Forms.Label wordExtarctorTitle;
         private System.Windows.Forms.Label lblStartingPosition;
-        private System.Windows.Forms.Label lblEndingPosition;
+        private System.Windows.Forms.Label lblNoOfCharacters;
         private System.Windows.Forms.Label lblFileInput;
         private System.Windows.Forms.NumericUpDown nudStartingPosition;
-        private System.Windows.Forms.NumericUpDown nudEndingPosition;
+        private System.Windows.Forms.NumericUpDown nudNoOfCharacters;
         private System.Windows.Forms.Button btnInputFileBrowse;
         private System.Windows.Forms.Label lblInputFileName;
         private System.Windows.Forms.Label lblExportDocumentType;
         private System.Windows.Forms.ComboBox cbxExportDocumentType;
         private System.Windows.Forms.Button btnProcess;
         private System.Windows.Forms.OpenFileDialog ofdInputFile;
+        private System.Windows.Forms.Button btnExportWords;
 
     }
 }
