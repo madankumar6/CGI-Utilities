@@ -53,13 +53,14 @@ namespace CGI_Utilities.UI
         private void btnProcess_Click(object sender, EventArgs e)
         {
             var fileContent = File.ReadAllBytes(inputFileName);
-            extractedWords = wordExtractor.ProcessFile(fileContent, (int)nudStartingPosition.Value, (int)nudNoOfCharacters.Value, OutputFileType.Excel);
+            extractedWords = wordExtractor.ProcessFile(fileContent, (int)nudStartingPosition.Value+1, (int)nudNoOfCharacters.Value, OutputFileType.Excel);
             MessageBox.Show("Completed the processing");
         }
 
         private void btnExportWords_Click(object sender, EventArgs e)
         {
-            wordExtractor
+            wordExtractor.ExportExtractedWords(OutputFileType.Excel);
+            MessageBox.Show("Completed");
         }
     }
 }
